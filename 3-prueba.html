@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EVALUACIOM</title>
+    <link rel="stylesheet" href="./lib/prismjs/css/prism.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <span class="back"><a href="/">VOLVER</a></span>
+    <section class="container">
+      <h1 class="text-center">Ejercicio 3</h1>
+      <pre>
+        <code class="language-javascript container-code">
+               function formatDate(userDate) {
+                    var pattern = /(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/([12]\d{3})/g,
+                         value = "";
+     
+                    if (pattern.test(userDate)) {
+                         var date = userDate.split("/")
+                         value = date[2] + date[1] + date[0];
+                    } else {
+                         value = "error en formato formato"
+                    }
+                    return value;
+               }
+              console.log( formatDate("03/03/1988"))
+        </code>
+     </pre>
+    </section>
+    <script src="./lib/prismjs/js/prism.js"></script>
+  </body>
+</html>

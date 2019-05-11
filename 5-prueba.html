@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EVALUACIOM</title>
+    <link rel="stylesheet" href="./lib/prismjs/css/prism.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <span class="back"><a href="/">VOLVER</a></span>
+    <section class="container">
+      <h1 class="text-center">Ejercicio 5</h1>
+      <pre>
+        <code class="language-javascript container-code">
+               var num = 234615;
+               function formatNumber(n) {
+                   try{
+                         var number = n,
+                              nToArray = [];
+                         if (typeof n == "number") {
+                              number = number.toString();
+                              for (var i = 0, len = number.length; i < len; i += 1) {
+                                   nToArray.push(+number.charAt(i));
+                              }
+                              return nToArray.sort(function (a, b) {
+                                   return b - a;
+                              })
+                         }
+                         if (typeof n == "string" || typeof n == "object" ||  typeof n == "undefined"|| typeof n == "function") {
+                              return false;
+                         }
+                    }catch(error){
+                         console.error(error," => el valor introducido no esta definido");
+                         return false;
+                    }
+               }
+               formatNumber(num);
+        </code>
+     </pre>
+    </section>
+    <script src="./lib/prismjs/js/prism.js"></script>
+  </body>
+</html>
